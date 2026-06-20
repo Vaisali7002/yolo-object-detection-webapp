@@ -1,7 +1,6 @@
 venv/
 __pycache__/
-*.pt
-*.jpg
-*.png
 uploads/
-runs/
+*.pyc
+static/result.jpg
+static/original.jpg
