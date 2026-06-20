@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YOLO Vision Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>YOLO Vision AI Detector</h1>
+    <p class="subtitle">Built with Python • Flask • YOLOv8</p>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="image">
+
+        <br><br>
+
+        <button type="submit">Detect Objects</button>
+
+    </form>
+
+    {% if output %}
+
+    <div class="image-section">
+
+        <div class="image-box">
+            <h2>Original Image</h2>
+            <img src="{{ url_for('static', filename=original) }}">
+        </div>
+
+        <div class="image-box">
+            <h2>Detection Result</h2>
+            <img src="{{ url_for('static', filename=output) }}">
+        </div>
+
+    </div>
+
+    <h2>Objects Found</h2>
+
+    <div class="objects">
+
+        {% for obj, count in objects.items() %}
+            <div class="object-card">
+                {{ obj }} : {{ count }}
+            </div>
+        {% endfor %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
