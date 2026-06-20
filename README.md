@@ -14,7 +14,7 @@ This project allows users to upload an image through a web interface, perform de
 
 ### Detection Result
 
-![Result](result.png)
+![Result](result.PNG)
 
 ---
 
