@@ -62,11 +62,16 @@ The system identifies objects inside the image, draws bounding boxes around dete
 
 ---
 
-## Project Demo
+## Technical Learnings
 
-Runs successfully on local machine.
+During development of this project, several practical engineering challenges were encountered:
 
-Cloud deployment attempted on Render and Railway but exceeded free-tier memory limits because of PyTorch + YOLO inference requirements.
+* Handling file uploads through Flask backend
+* Managing static file rendering in web applications
+* Integrating YOLOv8 inference pipeline with a web interface
+* Understanding memory constraints when deploying machine learning models on free cloud hosting platforms
+* Optimizing backend deployment configuration using Gunicorn and cloud infrastructure tools
+
 
 ---
 
